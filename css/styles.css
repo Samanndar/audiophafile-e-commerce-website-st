@@ -1,20 +1,11 @@
+/* CUSTOM PROPS */
+:root {
+
+}
 /* GLOBAL */
-html {
-  box-sizing: border-box;
-  height: 100%;
-  scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
   padding: 0;
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -25,7 +16,6 @@ body {
 }
 
 img {
-  max-width: 100%;
   height: auto;
 }
 
