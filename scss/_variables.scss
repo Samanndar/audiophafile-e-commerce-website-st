@@ -1,16 +1,35 @@
+// Sass 
+$color-brown: #d87d4a;    
+$color-brown-light:  #fbaf85;
+$color-dark: #000000;
+$color-grey-dark: #101010;
+$color-grey-darkey: #4c4c4c;
+$color-grey: #f1f1f1; 
+$color-light: #fafafa;
+$color-white: #ffffff; 
+$color-red: #cd2c2c; 
+
+$container-padding: 40px;
+
+$color-primary: $color-brown;
+$color-bg-body: $color-light;
+$color-body-text: $color-dark;
+
 /* CUSTOM PROPS */
 :root {
-  --color-brown: #d87d4a;
-  --color-brown-light: #fbaf85;
-  --color-dark: #000000;
-  --color-grey-dark: #101010;
-  --color-grey-darkey: #4c4c4c;
-  --color-grey: #f1f1f1;
-  --color-light: #fafafa;
-  --color-white: #ffffff;
-  --color-red: #cd2c2c;
+  --color-brown: #{$color-brown};
+  --color-brown-light: #{$color-brown-light};
+  --color-dark: #{$color-dark};
+  --color-grey-dark: #{$color-grey-dark};
+  --color-grey-darkey: #{$color-grey-darkey};
+  --color-grey: #{$color-grey};
+  --color-light: #{$color-light};
+  --color-white: #{$color-white};
+  --color-red: #{$color-red};
 
-  --container-padding: 40px;
-  --color-bg-body: var(--color-white);
-  --color-body-text: var(--color-dark);
+  --container-padding: #{$container-padding};
+
+  --color-primary: #{$color-primary};
+  --color-bg-body: #{$color-bg-body};
+  --color-body-text: #{$color-body-text};
 }

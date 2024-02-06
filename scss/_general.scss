@@ -11,11 +11,12 @@ body {
   background-color: var(--color-bg-body);
   color: var(--color-body-text);
 }
-
 img {
   height: auto;
 }
-
+*:focus {
+  @include outline($color-primary)
+}
 
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,

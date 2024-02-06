@@ -31,10 +31,12 @@
   --color-white: #ffffff;
   --color-red: #cd2c2c;
   --container-padding: 40px;
-  --color-bg-body: var(--color-white);
-  --color-body-text: var(--color-dark);
+  --color-primary: #d87d4a;
+  --color-bg-body: #fafafa;
+  --color-body-text: #000000;
 }
 
+/* OUTLINE*/
 /*
   Josh's Custom CSS Reset + some modifications
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -100,27 +102,6 @@ p, h1, h2, h3, h4, h5, h6 {
     scroll-behavior: auto !important;
   }
 }
-@font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-Bold.woff2") format("woff2"), url("../fonts/Manrope-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
 /* GLOBAL */
 body {
   display: flex;
@@ -137,6 +118,11 @@ body {
 
 img {
   height: auto;
+}
+
+*:focus {
+  outline: 2px dashed #d87d4a;
+  outline-offset: 3px;
 }
 
 /* AUTOFILL-STYLES */
@@ -177,17 +163,96 @@ select:-webkit-autofill:focus {
 .container {
   width: 100%;
   max-width: 74.375rem;
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
+  padding-left: 40px;
+  padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media only screen and (max-width: 40rem) {
-  :root {
-    --container-padding: 24px;
-  }
+.button {
+  display: inline-block;
+  padding: 14px 29px;
+  border: 1px solid var(--color-dark);
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
 }
+.button:hover {
+  background-color: var(--color-grey-dark);
+}
+.button--block {
+  display: block;
+  width: 100%;
+}
+.button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.button--primary:hover {
+  background-color: var(--color-brown-light);
+}
+.button--outline {
+  border-color: var(--color-bg-body);
+  background-color: transparent;
+  color: var(--color-dark);
+}
+.button--outline:hover {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+.button:active {
+  opacity: 0.6;
+}
+
+.arrow-link {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.arrow-link:hover {
+  color: #d87d4a;
+}
+.arrow-link:active {
+  opacity: 0.6;
+}
+.arrow-link::after {
+  width: 8px;
+  height: 12px;
+  background-image: url("../img/arrow-right-primary.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+}
+.arrow-link--stretched::before {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  content: "";
+}
+.arrow-link--stretched:focus {
+  outline: none;
+}
+.arrow-link--stretched:focus::before {
+  outline: 2px dashed #d87d4a;
+  outline-offset: 3px;
+}
+
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
