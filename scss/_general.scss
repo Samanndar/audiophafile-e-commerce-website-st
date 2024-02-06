@@ -7,13 +7,28 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5625rem; /* 166.667%*/
+  line-height: 1.5625rem;
+  /* 166.667%*/
   background-color: var(--color-bg-body);
   color: var(--color-body-text);
 }
+
 img {
   height: auto;
 }
+
+a {
+  color: var(--color-primary);
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 *:focus {
   @include outline($color-primary)
 }
