@@ -183,8 +183,8 @@ select:-webkit-autofill:focus {
 .button {
   display: inline-block;
   padding: 14px 29px;
-  border: 1px solid var(--color-dark);
   color: var(--color-white);
+  background-color: var(--color-dark);
   font-size: 0.8125rem;
   font-style: normal;
   font-weight: 700;
@@ -195,7 +195,7 @@ select:-webkit-autofill:focus {
   cursor: pointer;
 }
 .button:hover {
-  background-color: var(--color-grey-dark);
+  opacity: 0.6;
 }
 .button--block {
   display: block;
@@ -209,7 +209,7 @@ select:-webkit-autofill:focus {
   background-color: var(--color-brown-light);
 }
 .button--outline {
-  border-color: var(--color-bg-body);
+  border: 1px solid var(--color-dark);
   background-color: transparent;
   color: var(--color-dark);
 }
