@@ -30,7 +30,6 @@
   --color-light: #fafafa;
   --color-white: #ffffff;
   --color-red: #cd2c2c;
-  --container-padding: 40px;
   --color-primary: #d87d4a;
   --color-bg-body: #fafafa;
   --color-body-text: #000000;
@@ -115,6 +114,7 @@ body {
   /* 166.667%*/
   background-color: var(--color-bg-body);
   color: var(--color-body-text);
+  overflow-x: hidden;
 }
 
 img {
@@ -174,12 +174,23 @@ select:-webkit-autofill:focus {
 .container {
   width: 100%;
   max-width: 74.375rem;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   margin-left: auto;
   margin-right: auto;
 }
 
+/*640*/
+@media only screen and (min-width: 40rem) {
+  :root {
+    --container-padding: 40px;
+  }
+}
+@media only screen and (max-width: 40rem) {
+  :root {
+    --container-padding: 24px;
+  }
+}
 .button {
   display: inline-block;
   padding: 14px 29px;
@@ -252,10 +263,9 @@ select:-webkit-autofill:focus {
 .arrow-link--stretched::before {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
   content: "";
 }
 .arrow-link--stretched:focus {
@@ -310,6 +320,44 @@ select:-webkit-autofill:focus {
   opacity: 0.6;
 }
 
+.sitenav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.sitenav__link {
+  display: block;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 192.308%;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.5s ease 0s;
+}
+.sitenav__link:hover {
+  color: var(--color-primary);
+}
+
+.sitenav__item--active .sitenav__link {
+  color: var(--color-primary);
+}
+
+/*375 maxWidth*/
+@media only screen and (min-width: 23.4375em) {
+  .sitenav__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 34px;
+  }
+}
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
