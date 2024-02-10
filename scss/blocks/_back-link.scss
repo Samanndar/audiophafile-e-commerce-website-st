@@ -2,6 +2,7 @@
 .back-link {
   color: color.scale($color-dark, $alpha: -50%);
   text-decoration: none;
+  transition: var(--transition);
 
   &:hover {
     color: var(--color-primary);

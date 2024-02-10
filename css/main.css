@@ -19,6 +19,7 @@
   font-style: normal;
   font-display: swap;
 }
+/*EFFECT*/
 /* CUSTOM PROPS */
 :root {
   --color-brown: #d87d4a;
@@ -30,6 +31,8 @@
   --color-light: #fafafa;
   --color-white: #ffffff;
   --color-red: #cd2c2c;
+  /*EFFECT*/
+  --transition: all 0.5s ease 0s;
   --color-primary: #d87d4a;
   --color-bg-body: #fafafa;
   --color-body-text: #000000;
@@ -123,6 +126,7 @@ img {
 
 a {
   color: var(--color-primary);
+  transition: var(--transition);
 }
 a:hover {
   text-decoration: none;
@@ -205,6 +209,7 @@ select:-webkit-autofill:focus {
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
+  transition: var(--transition);
 }
 .button:hover {
   opacity: 0.6;
@@ -244,6 +249,7 @@ select:-webkit-autofill:focus {
   line-height: normal;
   letter-spacing: 2px;
   text-decoration: none;
+  transition: var(--transition);
 }
 .arrow-link:hover {
   color: #d87d4a;
@@ -279,6 +285,7 @@ select:-webkit-autofill:focus {
 .back-link {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
+  transition: var(--transition);
 }
 .back-link:hover {
   color: var(--color-primary);
@@ -340,7 +347,7 @@ select:-webkit-autofill:focus {
   text-align: center;
   text-decoration: none;
   color: #ffffff;
-  transition: all 0.5s ease 0s;
+  transition: var(--transition);
 }
 .sitenav__link:hover {
   color: var(--color-primary);
@@ -368,6 +375,7 @@ select:-webkit-autofill:focus {
 .socials__link {
   display: block;
   color: var(--color-white);
+  transition: var(--transition);
 }
 .socials__link:hover {
   color: var(--color-primary);

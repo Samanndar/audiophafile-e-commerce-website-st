@@ -11,6 +11,7 @@
   line-height: normal;
   letter-spacing: 2px;
   text-decoration: none;
+  transition: var(--transition);
 
   &:hover {
     color: $color-primary;

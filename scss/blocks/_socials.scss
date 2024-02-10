@@ -8,6 +8,7 @@
 .socials__link {
   display: block;
   color: var(--color-white);
+  transition: var(--transition);
 
   &:hover {
     color: var(--color-primary);

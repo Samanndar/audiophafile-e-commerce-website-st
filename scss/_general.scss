@@ -20,6 +20,7 @@ img {
 
 a {
   color: var(--color-primary);
+  transition: var(--transition);
 
   &:hover {
     text-decoration: none;
