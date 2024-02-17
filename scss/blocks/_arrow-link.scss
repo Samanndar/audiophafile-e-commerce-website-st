@@ -4,7 +4,7 @@
   display: inline-flex;
   gap: 12px;
   align-items: center;
-  color: color.scale($color-dark, $alpha: -50%);
+  color: color.scale($color: $color-dark, $alpha: -50%);
   font-size: 0.8125rem;
   font-style: normal;
   font-weight: 700;

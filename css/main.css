@@ -396,6 +396,73 @@ select:-webkit-autofill:focus {
   display: block;
 }
 
+.mission {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.mission__container {
+  display: grid;
+  justify-items: center;
+}
+.mission__img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 40px;
+  object-fit: cover;
+}
+.mission__content {
+  width: 100%;
+  max-width: 35.875rem;
+  text-align: center;
+}
+.mission__heading {
+  margin-bottom: 32px;
+  font-size: 1.75rem;
+  line-height: normal;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+.mission__heading--accent {
+  color: var(--color-primary);
+}
+.mission__text {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* 768 */
+@media only screen and (min-width: 48em) {
+  .mission {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .mission__heading {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    letter-spacing: 0.08931rem;
+  }
+}
+/* 992 */
+@media only screen and (min-width: 62em) {
+  .mission {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .mission__container {
+    grid-template-columns: 27.8125rem 1fr;
+    gap: 125px;
+    align-items: center;
+  }
+  .mission__img {
+    width: 540px;
+    height: 588px;
+    margin-bottom: 0;
+  }
+  .mission__content {
+    order: -1;
+    text-align: left;
+  }
+}
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
