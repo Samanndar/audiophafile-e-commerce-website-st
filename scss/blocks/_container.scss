@@ -7,17 +7,19 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 /*640*/
-@media only screen and (min-width: 40rem) {
-  $container-padding: 40px;  
+@include breakpoint-up(40em) {
+  $container-padding: 40px;
 
   :root {
     --container-padding: #{$container-padding};
   }
-}
-@media only screen and (max-width: 40rem) {
-  $container-padding: 24px;  
+};
 
+@include breakpoint-down(40em) {
+  $container-padding: 24px;
+  
   :root {
     --container-padding: #{$container-padding};
   }
