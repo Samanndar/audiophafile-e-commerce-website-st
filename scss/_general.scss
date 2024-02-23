@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /* GLOBAL */
 body {
   display: flex;
@@ -10,7 +12,7 @@ body {
   line-height: 1.5625rem;
   /* 166.667%*/
   background-color: var(--color-bg-body);
-  color: var(--color-body-text);
+  color: color.scale($color: $color-dark, $alpha: -50%);
   overflow-x: hidden;
 }
 
