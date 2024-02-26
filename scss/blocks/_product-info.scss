@@ -5,6 +5,10 @@
 
   &--center {
     text-align: center;
+
+    @include breakpoint-up(62em) {
+      text-align: left;
+    }
   }
 
   &__title {
@@ -19,10 +23,50 @@
     .product-info--white & {
       color: var(--color-white);
     }
+
+    .product-info--hero & {
+      margin-bottom: 24px;
+      font-size: 2.25rem;
+      line-height: 111.111%;
+      letter-spacing: 0.08038rem;
+
+      @include breakpoint-up(768px) {
+        font-size: 3.5rem;
+        line-height: 103.571%;
+        letter-spacing: 0.125rem;
+      }
+    }
+
+    .product-info--category-page {
+      margin-bottom: 24px;
+
+      @include breakpoint-up(768px) {
+        margin-bottom: 32px;
+        font-size: 2.5rem;
+        line-height: 110%;
+        letter-spacing: 0.08931rem;
+      }
+    }
+
+    .product-info--product-page & {
+      margin-bottom: 24px;
+
+      @include breakpoint-up(768px) {
+        margin-bottom: 32px;
+        line-height: 114.286%;
+
+      }
+
+      @include breakpoint-up(992px) {
+        font-size: 2.5rem;
+        line-height: 11%;
+        letter-spacing: 0.08931rem;
+      }
+    }
   }
 
   &__new {
-    order: -1px;
+    order: -1;
     margin-bottom: 24px;
     color: var(--color-primary);
     font-size: 0.875rem;
@@ -34,6 +78,30 @@
     .product-info--white & {
       color: color.scale($color: $color-white, $alpha: -25%);
     }
+
+    .product-info--hero & {
+      margin-bottom: 16px;
+
+      @include breakpoint-up(768px) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .product-info--category-page & {
+      margin-bottom: 24px;
+
+      @include breakpoint-up(768px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .product-info--product-page & {
+      margin-bottom: 24px;
+
+      @include breakpoint-up(768px) {
+        margin-bottom: 16px;
+      }
+    }
   }
 
   &__text {
@@ -41,6 +109,25 @@
 
     .product-info--white & {
       color: color.scale($color: $color-white, $alpha: -25%);
+    }
+
+    .product-info--hero & {
+      margin-bottom: 28px;
+
+      @include breakpoint-up(768px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .product-info--category-page {
+      margin-bottom: 24px;
+
+      @include breakpoint-up(768px) {
+        margin-bottom: 32px;
+        font-size: 2.5rem;
+        line-height: 110%;
+        letter-spacing: 0.08931rem;
+      }
     }
   }
 
@@ -55,8 +142,15 @@
 
   &__price--wrapper {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 8px;
     margin-bottom: 32px;
+
+    @include breakpoint-up(992px) {
+      margin-bottom: 48px;
+    }
+
   }
 
   &__actions {
@@ -64,30 +158,14 @@
     flex-wrap: wrap;
     gap: 16px;
 
-  }
+    .product-info--center & {
+      justify-content: center;
 
-  &--center &__actions {
-    justify-content: center;
+      @include breakpoint-up(992px) {
+        justify-content: flex-start;
+      }
+    }
   }
 
 
 }
-
-.product-info--big {}
-
-.product-info--white {}
-
-.product-info__title {}
-
-.product-info__new {}
-
-.product-info__text {}
-
-.product-info__actions {}
-
-
-.product-inf__price-wrapper {}
-
-.product-inf__price--old {}
-
-.product-inf__price {}
