@@ -657,9 +657,7 @@ select:-webkit-autofill:focus {
 }
 @media only screen and (min-width: 765px) {
   .product--product-page .product__img-wrapper::after {
-    width: 262px;
-    height: 56px;
-    bottom: 80px;
+    bottom: 35px;
   }
 }
 @media only screen and (min-width: 992px) {

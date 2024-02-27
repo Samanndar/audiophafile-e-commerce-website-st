@@ -64,10 +64,9 @@
       @include product-shadow($width: 165px, $height: 35px, $bottom: 50px, $opacity: 0.1521);
 
       @include breakpoint-up(765px) {
-        width: 262px;
-        height: 56px;
-        bottom: 80px;
+        bottom: 35px;
       }
+
       @include breakpoint-up(992px) {
         width: 262px;
         height: 56px;
