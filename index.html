@@ -44,7 +44,6 @@
     <div style="display: grid; gap: 24px; justify-items: start; margin-bottom: 24px;">
       <a href="#" class="back-link">Go back</a>
     </div>
-    </div>
   </section>
   <section class="container">
     <h2>Number controls</h2>
@@ -88,7 +87,6 @@
         </ul>
       </nav>
     </div>
-    </div>
   </section>
   <section class="container">
     <h2>Socials</h2>
@@ -127,13 +125,10 @@
         </ul>
       </div>
     </div>
-    </div>
   </section>
-  <!-- PRODUCT-INFO -->
   <section class="container">
     <h2>Product info</h2>
-    <div
-      style="display: grid; gap: 24px; justify-items: start; background-color: #ccc; padding: 10px; margin-bottom: 20px;">
+    <div style="display: grid; gap: 24px; justify-items: start; background-color: #ccc; margin-bottom: 20px;">
       <div class="product-info product-info--hero product-info--center product-info--white">
         <h2 class="product-info__title">XX99 Mark II Headphones</h2>
         <p class="product-info__new">New product</p>
@@ -156,7 +151,6 @@
           <button class="button button--primary" type="button">See product</button>
         </footer>
       </div>
-
       <div class="product-info product-info--product-page">
         <h2 class="product-info__title">XX99 Mark II Headphones</h2>
         <p class="product-info__new">New product</p>
@@ -180,6 +174,70 @@
 
           <button class="button button--primary" type="button">Add to cart</button>
         </footer>
+      </div>
+    </div>
+  </section>
+  <!-- PRODUCT -->
+  <section class="container">
+    <h2>Product</h2>
+    <div style="display: grid; gap: 24px; ;margin-bottom: 20px;">
+      Category
+      <div class="product product--category-page">
+        <div class="product__img-wrapper">
+          <picture class="product__picture">
+            <source media="(min-width: 992px)" srcset="./img/xx99-mark2-big.png 1x, ./img/xx99-mark2-big@2x.png 2x"
+              width="351" height="387">
+            <img src="./img/xx99-mark2-medium.png" alt="XX99 Mark II Headphones" class="product__img" width="220"
+              height="243" srcset="./img/xx99-mark2-medium.png 1x, ./img/xx99-mark2-medium@2x.png 2x">
+          </picture>
+        </div>
+
+        <div class="product__product-info product-info product-info--category-page product-info--center">
+          <h2 class="product-info__title product-info__title--lg">XX99 Mark II Headphones</h2>
+          <p class="product-info__new">New product</p>
+          <p class="product-info__text">The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines
+            your premium headphone experience by reproducing the balance deptha and precision of studio-quality sound.
+          </p>
+
+          <footer class="product-info__actions">
+            <button class="button button--primary" type="button">See product</button>
+          </footer>
+        </div>
+      </div>
+
+      Product-page
+      <div class="product product--product-page">
+        <div class="product__img-wrapper">
+          <picture class="product__picture">
+            <source media="(min-width: 765px)" srcset="./img/xx99-mark2-big.png 1x, ./img/xx99-mark2-big@2x.png 2x"
+              width="351" height="387">
+            <img src="./img/xx99-mark2-small.png" alt="XX99 Mark II Headphones" class="product__img" width="181"
+              height="201" srcset="./img/xx99-mark2-small.png 1x, ./img/xx99-mark2-small@2x.png 2x">
+          </picture>
+        </div>
+        <div class="product__product-info product-info product-info--category-page ">
+          <h2 class="product-info__title product-info__title--lg">XX99 Mark II Headphones</h2>
+          <p class="product-info__new">New product</p>
+          <p class="product-info__text">The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines
+            your premium headphone experience by reproducing the balance deptha and precision of studio-quality sound.
+          </p>
+          <p class="product-inf__price-wrapper">
+            <s class="product-inf__old-price">$ 3,199</s>
+            <span class="product-inf__price">$ 2,999</span>
+          </p>
+          <footer class="product-info__actions">
+            <div class="number-controls" data-item-count="1">
+              <p class="number-controls__count">
+                <span class="visually-hidden">Count</span>
+                <span class="number-controls__count-value">1</span>
+              </p>
+              <button class="number-controls__button number-controls__button--decrement" aria-label="Subtract one">-</button>
+              <button class="number-controls__button number-controls__button--increment" aria-label="Add one">+</button>
+            </div>
+          
+            <button class="button button--primary" type="button">Add to cart</button>
+          </footer>
+        </div>
       </div>
     </div>
   </section>
