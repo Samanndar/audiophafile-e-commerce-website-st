@@ -20,6 +20,11 @@
 
     @include breakpoint-up(765px) {
       grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    @include breakpoint-up(992px) {
+      grid-template-columns: 1fr 1fr;
       gap: 125px;
     }
   }
@@ -79,6 +84,30 @@
     .product--category-page & {
       max-width: 35.75rem;
       margin: 0 auto;
+    }
+  }
+
+  &__img {
+    .product--category-page & {
+      width: 242px;
+      width: 244px;
+      object-fit: contain;
+
+      @include breakpoint-up(992px) {
+        width: 372px;
+        height: 389px;
+      }
+    }
+
+    .product--product-page & {
+      width: 185px;
+      width: 193px;
+      object-fit: contain;
+
+      @include breakpoint-up(992px) {
+        width: 372px;
+        height: 389px;
+      }
     }
   }
 }
