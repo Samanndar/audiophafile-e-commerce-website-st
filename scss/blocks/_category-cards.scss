@@ -1,0 +1,18 @@
+.category-cards {
+  
+  &__list {
+    display: grid;
+    padding: 0;
+    list-style: none;
+    gap: 16px;
+    
+    @include breakpoint-up(768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    @include breakpoint-up(992px) {
+      gap: 30px;
+    }
+  }
+}
+
