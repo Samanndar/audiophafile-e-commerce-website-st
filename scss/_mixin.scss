@@ -50,3 +50,18 @@
   opacity: $opacity;
   filter: blur(21.746253967285156px);
 }
+@mixin page-section-header() {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.0536rem;
+  color: var(--color-dark);
+  text-align: center;
+  text-transform: uppercase;  
+
+  @include breakpoint-up(768px) {
+    font-size: 2rem;
+    line-height: 112.5%;
+    letter-spacing: 0.0714rem;
+  }
+}
