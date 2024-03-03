@@ -1,0 +1,14 @@
+.product-features {
+
+  &__heading {
+    @include page-section-heading();
+    margin-bottom: 24px;
+
+    @include breakpoint-up(992px) {
+      margin-bottom: 32px;
+    }
+  }
+  & p:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

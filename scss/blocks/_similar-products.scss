@@ -8,7 +8,7 @@
     padding-top: 80px;
   }
   &__heading {
-    @include page-section-header();
+    @include page-section-heading();
     margin-bottom: 40px;
    
     @include breakpoint-up(768px) {

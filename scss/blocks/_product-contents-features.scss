@@ -1,0 +1,16 @@
+.product-features-contents {
+  
+  &__container {
+    display: grid;
+    align-items: start;
+    gap: 88px;
+
+    @include breakpoint-up(768px) {
+      gap: 120px;
+    }
+    @include breakpoint-up(992px) {
+      grid-template-columns: minmax(39.6875rem, 1fr) minmax(21.875rem, 1fr);
+      gap: 125px;
+    }
+  }
+}
