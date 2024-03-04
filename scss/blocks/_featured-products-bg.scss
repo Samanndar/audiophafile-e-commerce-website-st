@@ -20,7 +20,7 @@
     }
   }
   @include breakpoint-up(992px) {
-    padding: 64 96px;
+    padding: 64px 96px;
     background-image: url("../img/featured-product-bg-desktop.jpg");
     background-position: center center;
     @include retina-bg {
@@ -44,7 +44,3 @@
     margin-bottom: 32px;
   }
 }
-
-.featured-product-bg__content {}
-
-.featured-product-bg__title {}
