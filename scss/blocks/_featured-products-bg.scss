@@ -1,0 +1,50 @@
+.featured-product-bg {
+  display: grid;
+  align-items: center;
+  border-radius: 8px;
+  height: 320px;
+  padding: 24px;
+  background-image: url("../img/featured-product-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  overflow: hidden;
+  @include retina-bg {
+    background-image: url("../img/featured-product-bg-mobile@2x.jpg");
+  }
+  @include breakpoint-up(768px) {
+    padding: 64px;
+    background-image: url("../img/featured-product-bg-tablet.jpg");
+    @include retina-bg {
+      background-image: url("../img/featured-product-bg-tablet@2x.jpg");
+    }
+  }
+  @include breakpoint-up(992px) {
+    padding: 64 96px;
+    background-image: url("../img/featured-product-bg-desktop.jpg");
+    background-position: center center;
+    @include retina-bg {
+      background-image: url("../img/featured-product-bg-desktop@2x.jpg");
+    }
+  }
+
+  &__content {
+    @include breakpoint-up(768px) {
+      max-width: 50%;
+    }
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.125rem;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+}
+
+.featured-product-bg__content {}
+
+.featured-product-bg__title {}
