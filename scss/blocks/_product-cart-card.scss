@@ -1,0 +1,58 @@
+@use "sass:color";
+.product-cart-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__img-wrapper {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    @include round-card($width: 64px, $height: 64px);
+  }
+  &__img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+  &__info {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;  
+    gap: 0 8px;
+    margin-bottom: 32px;
+  }
+  &__title {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 166.667%;
+    color: var(--color-dark);
+    text-transform: uppercase;
+  }
+  &__price {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 178.571%;
+    color: color.scale($color: $color-dark, $alpha: -50%);
+  }
+  &-summary {
+    display: grid;
+    gap: 8px;
+  }
+  &__count--summary {
+    margin-bottom: 24px;
+  }
+  &__summary--checkout-page {
+    margin-bottom: 32px;
+  }
+  &__count {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+
+    &--summary {
+      align-self: baseline;
+    }
+  }
+}
