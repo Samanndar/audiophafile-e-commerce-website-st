@@ -66,6 +66,18 @@
   }
   &__menu-inner {
     display: none;
+    .header--menu-open & {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      border-radius: 0 0 8px 8px;
+      background-color: var(--color-white);
+    }
     @include breakpoint-up(992px) {
       display: block;
     }
@@ -98,9 +110,6 @@
   }
   &__cart-inner {
     display: none;
-    @include breakpoint-up(992px) {
-      display: block;
-    }
   }
   &__cart-toggler {
     display: block;
@@ -129,16 +138,3 @@
   }
 }
 
-.header__menu-toggler {}
-
-.header__menu-toggler-icon {}
-
-.header__menu-inner {}
-
-.header__logo {}
-
-.header__sitenav {}
-
-.header__cart {}
-
-.header__cart-inner {}

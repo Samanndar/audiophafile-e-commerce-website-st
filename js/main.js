@@ -2,6 +2,17 @@ function init() {
   const MINIMUM_ITEM_COUNT = 1;
   const MAXIMUM_ITEM_COUNT = 10;
 
+  // HEADER
+  const elHeader = document.querySelector(".header");
+  const elHeaderMenyToggle = document.querySelector(".header__menu-toggler");
+
+  if(elHeaderMenyToggle) {
+    elHeaderMenyToggle.addEventListener("click", function() {
+      elHeader.classList.toggle("header--menu-open")
+    })
+  }
+
+  // NUMBER CONTROLS
   const elNumbersConstrolsDecrementButton = document.querySelectorAll(".number-controls__button--decrement");
   const elNumbersConstrolsIncrementButton = document.querySelectorAll(".number-controls__button--increment");
 
@@ -36,6 +47,7 @@ function init() {
     parentNumberControls.dataset.itemCount = currentItemCount;
     parentNumberControls.querySelector(".number-controls__count-value").textContent = currentItemCount;
   }
+
 
 }
 
