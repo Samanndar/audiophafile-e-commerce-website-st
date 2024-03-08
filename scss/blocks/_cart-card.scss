@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    margin-bottom: 24px;
   }
   &__heading {
     margin-right: 16px;
@@ -46,7 +46,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
   &-summary__title {
     text-transform: uppercase;
