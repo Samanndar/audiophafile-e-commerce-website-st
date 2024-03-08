@@ -1,6 +1,7 @@
 .logo {
   display: block;
   text-decoration: none;
+  flex-shrink: 0;
 
   &__img {
     width: 143px;
