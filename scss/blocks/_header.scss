@@ -1,0 +1,144 @@
+.header {
+  position: relative;
+  z-index: 1;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: var(--color-dark);
+  @include breakpoint-up(992px) {
+    
+    padding-bottom: 36px;
+  }
+
+  &--absolute {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    // background-color: rgba(255, 255, 255, 0.104);
+    background-color: rgba(249, 7, 7);
+
+    @include breakpoint-up(768px) {
+      left: var(--container-padding);
+      right: var(--container-padding);
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    @include breakpoint-up(768px) {
+      justify-content: flex-start;
+      gap: 42px;
+    }
+    @include breakpoint-up(992px) {
+      justify-content: space-between;
+      gap: 42px;
+    }
+  }
+
+  &__logo {
+
+    @include breakpoint-up(768px) {
+      margin-right: auto;
+    }
+    @include breakpoint-up(992px) {
+      margin-right: 0;
+    }
+  }
+
+  &__sitenav {
+    display: none;
+    @include breakpoint-up(992px) {
+      display: block;
+    }
+  }
+  &__menu-inner {
+    display: none;
+    @include breakpoint-up(992px) {
+      display: block;
+    }
+  }
+  &__menu-toggler {
+    display: block;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: var(--transition);
+  
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+  &__menu-toggler-icon {
+    display: block;
+    width: 16px;
+    height: 15px;
+  }
+  &__cart {
+    flex-shrink: 0;
+    @include breakpoint-up(992px) {
+      display: flex;
+      justify-content: flex-end;
+      min-width: 143px;
+    }
+  }
+  &__cart-inner {
+    display: none;
+    @include breakpoint-up(992px) {
+      display: block;
+    }
+  }
+  &__cart-toggler {
+    display: block;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: var(--transition);
+  
+    &:hover {
+      color: var(--color-primary);
+    } //49:15
+  }
+  &__cart-toggler-icon {
+    width: 23px;
+    height: 20px;
+    
+  }
+}
+
+.haeder__menu {
+  flex-shrink: 0;
+  @include breakpoint-up(992px){
+    display: none;
+  }
+}
+
+.header__menu-toggler {}
+
+.header__menu-toggler-icon {}
+
+.header__menu-inner {}
+
+.header__logo {}
+
+.header__sitenav {}
+
+.header__cart {}
+
+.header__cart-inner {}
