@@ -117,7 +117,7 @@
     display: none;
 
     .header--cart-open & {
-    display: block;
+      display: block;
       position: absolute;
       z-index: 1;
       top: calc(100% + 24px);
