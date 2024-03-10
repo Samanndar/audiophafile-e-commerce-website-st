@@ -5,7 +5,6 @@ function init() {
   // HEADER
   const elHeader = document.querySelector(".header");
   const elHeaderToggler = document.querySelectorAll(".header__toggler");
-  const elOverlay = document.querySelector(".overlay")
 
   // Click outside
   // Esc keyup
@@ -13,7 +12,7 @@ function init() {
   elHeaderToggler.forEach(function(elHeaderToggler) {
     elHeaderToggler.addEventListener("click", function() {
       const target = elHeaderToggler.dataset.target;
-
+      
       if(target === "menu") {
         elHeader.classList.remove("header--cart-open");
         elHeader.classList.toggle("header--menu-open");
@@ -23,28 +22,28 @@ function init() {
         elHeader.classList.remove("header--menu-open");
         elHeader.classList.toggle("header--cart-open");
       }
+      const isHeaderMenuOrCartOpen = elHeader.classList.contains("header--menu-open") || elHeader.classList.contains("header--cart-open");
+      function showOverlay() {
+        const elOverlay = document.querySelector(".overlay")
+        elOverlay.classList.add("overlay--shown")
+      }
+      function hideOverlay() {
+      const elOverlay = document.querySelector(".overlay")
+        elOverlay.classList.remove("overlay--shown")
+      }
+      if(isHeaderMenuOrCartOpen) {
+        showOverlay()
+      } else {
+        hideOverlay()
+      }
+      elHeader.addEventListener("keydown" , function() {
+        if("Esc") {
+          elHeader.classList.remove("header--menu-open");
+          elHeader.classList.remove("header--cart-open");
+        }
+      })
     })
   })
-  function showOverlay() {
-    elOverlay.classList.add("overlay--shown")
-  }
-  function hideOverlay() {
-    elOverlay.classList.remove("overlay--hide")
-  }
-  const isHeaderMenuOrCartOpen = elHeader.classList.contains("header--menu-open") || elHeader.classList.contains("header--cart-open");
-  if(isHeaderMenuOrCartOpen) {
-    showOverlay()
-  } else {
-    hideOverlay()
-  }
-  elHeader.addEventListener("keydown" , function(e) {
-    if("Esc") {
-      elHeader.classList.remove("header--menu-open");
-      elHeader.classList.remove("header--cart-open");
-      console.log(e);
-    }
-  })
-
   // NUMBER CONTROLS
   const elNumbersConstrolsDecrementButton = document.querySelectorAll(".number-controls__button--decrement");
   const elNumbersConstrolsIncrementButton = document.querySelectorAll(".number-controls__button--increment");
