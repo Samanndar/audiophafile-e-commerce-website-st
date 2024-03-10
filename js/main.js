@@ -5,6 +5,7 @@ function init() {
   // HEADER
   const elHeader = document.querySelector(".header");
   const elHeaderToggler = document.querySelectorAll(".header__toggler");
+  const elOverlay = document.querySelector(".overlay")
 
   // Click outside
   // Esc keyup
@@ -23,6 +24,25 @@ function init() {
         elHeader.classList.toggle("header--cart-open");
       }
     })
+  })
+  function showOverlay() {
+    elOverlay.classList.add("overlay--shown")
+  }
+  function hideOverlay() {
+    elOverlay.classList.remove("overlay--hide")
+  }
+  const isHeaderMenuOrCartOpen = elHeader.classList.contains("header--menu-open") || elHeader.classList.contains("header--cart-open");
+  if(isHeaderMenuOrCartOpen) {
+    showOverlay()
+  } else {
+    hideOverlay()
+  }
+  elHeader.addEventListener("keydown" , function(e) {
+    if("Esc") {
+      elHeader.classList.remove("header--menu-open");
+      elHeader.classList.remove("header--cart-open");
+      console.log(e);
+    }
   })
 
   // NUMBER CONTROLS
