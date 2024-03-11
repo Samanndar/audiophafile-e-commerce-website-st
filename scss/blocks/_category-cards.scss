@@ -6,11 +6,11 @@
     list-style: none;
     gap: 16px;
     
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       gap: 30px;
     }
   }

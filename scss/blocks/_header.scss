@@ -19,7 +19,7 @@
     right: 0;
     background-color: rgba(255, 255, 255, 0.104);
     
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       left: var(--container-padding);
       right: var(--container-padding);
     }
@@ -35,7 +35,7 @@
     background-color: rgb(0, 0, 0, 0.5);
     content: "";
   }
-  @include breakpoint-up(992px) {
+  @include breakpoint-up($breakpoint-large) {
     &--menu-open::before {
       display: none;
     }
@@ -49,11 +49,11 @@
     padding-bottom: 32px;
     gap: 16px;
     
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       justify-content: flex-start;
       gap: 42px;
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       justify-content: space-between;
       gap: 42px;
       padding-bottom: 36px;
@@ -62,17 +62,17 @@
 
   &__logo {
 
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       margin-right: auto;
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       margin-right: 0;
     }
   }
 
   &__sitenav {
     display: none;
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       display: block;
     }
   }
@@ -90,7 +90,7 @@
       border-radius: 0 0 8px 8px;
       background-color: var(--color-white);
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       display: block;
     }
   }
@@ -133,7 +133,7 @@
   }
   &__cart {
     flex-shrink: 0;
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       display: flex;
       justify-content: flex-end;
       min-width: 143px;
@@ -152,7 +152,7 @@
       @include breakpoint-up(23.475rem) {
         top: calc(100% + 24px);
       }
-      @include breakpoint-up(992px) {
+      @include breakpoint-up($breakpoint-large) {
         top: calc(100% + 32px);
       }
     }

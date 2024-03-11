@@ -6,10 +6,10 @@
     padding: 0;
     list-style: none;
 
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       gap: 32px;
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       gap: 48px;
     }
   }

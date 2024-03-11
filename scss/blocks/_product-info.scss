@@ -30,7 +30,7 @@
       line-height: 111.111%;
       letter-spacing: 0.08038rem;
 
-      @include breakpoint-up(768px) {
+      @include breakpoint-up($breakpoint-medium) {
         font-size: 3.5rem;
         line-height: 103.571%;
         letter-spacing: 0.125rem;
@@ -40,7 +40,7 @@
     .product-info--category-page {
       margin-bottom: 24px;
 
-      @include breakpoint-up(768px) {
+      @include breakpoint-up($breakpoint-medium) {
         margin-bottom: 32px;
         font-size: 2.5rem;
         line-height: 110%;
@@ -51,13 +51,13 @@
     .product-info--product-page & {
       margin-bottom: 24px;
 
-      @include breakpoint-up(768px) {
+      @include breakpoint-up($breakpoint-medium) {
         margin-bottom: 32px;
         line-height: 114.286%;
 
       }
 
-      @include breakpoint-up(992px) {
+      @include breakpoint-up($breakpoint-large) {
         font-size: 2.5rem;
         line-height: 11%;
         letter-spacing: 0.08931rem;
@@ -82,7 +82,7 @@
     .product-info--hero & {
       margin-bottom: 16px;
 
-      @include breakpoint-up(768px) {
+      @include breakpoint-up($breakpoint-medium) {
         margin-bottom: 24px;
       }
     }
@@ -90,7 +90,7 @@
     .product-info--category-page & {
       margin-bottom: 24px;
 
-      @include breakpoint-up(768px) {
+      @include breakpoint-up($breakpoint-medium) {
         margin-bottom: 16px;
       }
     }
@@ -98,7 +98,7 @@
     .product-info--product-page & {
       margin-bottom: 24px;
 
-      @include breakpoint-up(768px) {
+      @include breakpoint-up($breakpoint-medium) {
         margin-bottom: 16px;
       }
     }
@@ -114,7 +114,7 @@
     .product-info--hero & {
       margin-bottom: 28px;
 
-      @include breakpoint-up(768px) {
+      @include breakpoint-up($breakpoint-medium) {
         margin-bottom: 40px;
       }
     }
@@ -122,7 +122,7 @@
     .product-info--category-page {
       margin-bottom: 24px;
 
-      @include breakpoint-up(768px) {
+      @include breakpoint-up($breakpoint-medium) {
         margin-bottom: 32px;
         font-size: 2.5rem;
         line-height: 110%;
@@ -147,7 +147,7 @@
     gap: 8px;
     margin-bottom: 32px;
 
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       margin-bottom: 48px;
     }
 
@@ -161,7 +161,7 @@
     .product-info--center & {
       justify-content: center;
 
-      @include breakpoint-up(992px) {
+      @include breakpoint-up($breakpoint-large) {
         justify-content: flex-start;
       }
     }

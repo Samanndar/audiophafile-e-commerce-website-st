@@ -2,11 +2,11 @@
   display: grid;
   gap: 24px;
 
-  @include breakpoint-up(768px) {
+  @include breakpoint-up($breakpoint-medium) {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;  
   }
-  @include breakpoint-up(992px) {
+  @include breakpoint-up($breakpoint-large) {
     gap: 60px;
   }
   &__card {
@@ -17,11 +17,11 @@
     justify-items: start;
     gap: 32px;
     padding: 24px;
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       height: 100%;
       padding: 40px;
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       padding: 40px 95px;
     }
   }
@@ -39,7 +39,7 @@
     object-fit: cover;
     overflow: hidden;
 
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       height: 100%;
     }
   }

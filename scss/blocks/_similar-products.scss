@@ -3,7 +3,7 @@
   padding-bottom: 60px;
   text-align: center;
 
-  @include breakpoint-up(992px) {
+  @include breakpoint-up($breakpoint-large) {
     padding-bottom: 80px;
     padding-top: 80px;
   }
@@ -11,10 +11,10 @@
     @include page-section-heading();
     margin-bottom: 40px;
    
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       margin-bottom: 56px;
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       margin-bottom: 64px;
     }
   }
@@ -24,10 +24,10 @@
     padding: 0;
     list-style: none;
 
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       grid-template-columns: repeat(3, 1fr);
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       gap: 56px 30px;
     }
   }
@@ -52,7 +52,7 @@
     margin-bottom: 32px;
     padding: 12px;
 
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       height: 318px;
       margin-bottom: 40px;
     }
@@ -62,7 +62,7 @@
     height: 96px;
     object-fit: contain;
 
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       width: 190px;
       height: 200px;
     }

@@ -58,7 +58,7 @@
   color: var(--color-dark);
   text-transform: uppercase;  
 
-  @include breakpoint-up(768px) {
+  @include breakpoint-up($breakpoint-medium) {
     font-size: 2rem;
     line-height: 112.5%;
     letter-spacing: 0.0714rem;

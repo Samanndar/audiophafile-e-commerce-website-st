@@ -4,21 +4,21 @@
     display: grid;
     gap: 20px 18px;
 
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       grid-template-columns: 3fr 5fr;
       grid-template-rows: repeat(2, 174px);
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       grid-template-columns: 3fr 4fr;
       grid-template-rows: repeat(2, 280px);
     }
-    @include breakpoint-up(74.375rem) {
+    @include breakpoint-up($breakpoint-container) {
       grid-template-columns: minmax(27.8125rem, 1fr) minmax(39.6875rem, 1fr);
     }
   }
   &__item {
 
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       &:nth-child(1) {
         grid-column: 1 / 2;
         grid-row: 1 / 2;

@@ -9,11 +9,11 @@
     list-style: none;
   }
 
-  @include breakpoint-up(768px) {
+  @include breakpoint-up($breakpoint-medium) {
     padding-top: 120px;
   }
 
-  @include breakpoint-up(992px) {
+  @include breakpoint-up($breakpoint-large) {
     padding-top: 160px;
     padding-bottom: 160px;
 

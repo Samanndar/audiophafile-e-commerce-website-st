@@ -2,10 +2,10 @@
   display: grid;
   gap: 24px 12px;
 
-  @include breakpoint-up(768px) {
+  @include breakpoint-up($breakpoint-medium) {
     grid-template-columns: repeat(2, 1fr)
   }
-  @include breakpoint-up(992px) {
+  @include breakpoint-up($breakpoint-large) {
     grid-template-columns: none;
     gap: 32px;
   }

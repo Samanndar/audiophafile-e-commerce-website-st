@@ -16,6 +16,11 @@ $color-primary: $color-brown;
 $color-bg-body: $color-light;
 $color-body-text: $color-dark;
 
+/* BREAKPOINT */ 
+$breakpoint-medium: 48em;
+$breakpoint-large: 62em;
+$breakpoint-container: 74.375em;
+
 /* CUSTOM PROPS */
 :root {
   --color-brown: #{$color-brown};

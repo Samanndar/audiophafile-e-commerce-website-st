@@ -12,12 +12,12 @@
   color: var(--color-white);
   text-align: center;
   overflow: hidden;
-  @include breakpoint-up(768px) {
+  @include breakpoint-up($breakpoint-medium) {
     padding: 52px 64px 64px;
     background-size: 944px 944px;
     background-position: center top -288px;
   }
-  @include breakpoint-up(992px) {
+  @include breakpoint-up($breakpoint-large) {
     height: 560px;  
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
@@ -38,22 +38,22 @@
     object-fit: contain;
     margin-bottom: 32px;
     
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       width: 237px;
       height: 237px;
       margin-bottom: 64px;
     }
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       width: 237px;
       height: 237px;
       margin-bottom: 64px;
     }
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       width: 493px;
       height: auto;
       margin-bottom: 0;
     }
-    @include breakpoint-up(74.375rem) {
+    @include breakpoint-up($breakpoint-container) {
       margin-bottom: -120px;
     }
   }
@@ -65,7 +65,7 @@
     text-transform: uppercase;
     margin-bottom: 24px;
 
-    @include breakpoint-up(992px) {
+    @include breakpoint-up($breakpoint-large) {
       font-size: 3.5rem;
       line-height: 103.571%;
       letter-spacing: 0.125rem;
@@ -75,7 +75,7 @@
     margin-bottom: 24px;
     color: color.scale($color: $color-white, $alpha: -50%);
 
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       margin-bottom: 40px;
     }
   }

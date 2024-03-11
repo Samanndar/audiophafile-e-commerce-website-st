@@ -12,14 +12,14 @@
   @include retina-bg {
     background-image: url("../img/featured-product-bg-mobile@2x.jpg");
   }
-  @include breakpoint-up(768px) {
+  @include breakpoint-up($breakpoint-medium) {
     padding: 64px;
     background-image: url("../img/featured-product-bg-tablet.jpg");
     @include retina-bg {
       background-image: url("../img/featured-product-bg-tablet@2x.jpg");
     }
   }
-  @include breakpoint-up(992px) {
+  @include breakpoint-up($breakpoint-large) {
     padding: 64px 96px;
     background-image: url("../img/featured-product-bg-desktop.jpg");
     background-position: center center;
@@ -29,7 +29,7 @@
   }
 
   &__content {
-    @include breakpoint-up(768px) {
+    @include breakpoint-up($breakpoint-medium) {
       max-width: 50%;
     }
   }
