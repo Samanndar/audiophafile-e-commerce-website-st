@@ -23,25 +23,13 @@ function init() {
         elHeader.classList.toggle("header--cart-open");
       }
       const isHeaderMenuOrCartOpen = elHeader.classList.contains("header--menu-open") || elHeader.classList.contains("header--cart-open");
-      function showOverlay() {
-        const elOverlay = document.querySelector(".overlay")
-        elOverlay.classList.add("overlay--shown")
-      }
-      function hideOverlay() {
-      const elOverlay = document.querySelector(".overlay")
-        elOverlay.classList.remove("overlay--shown")
-      }
-      if(isHeaderMenuOrCartOpen) {
-        showOverlay()
-      } else {
-        hideOverlay()
-      }
-      elHeader.addEventListener("keydown" , function() {
+      function keyEsc() {
         if("Esc") {
           elHeader.classList.remove("header--menu-open");
           elHeader.classList.remove("header--cart-open");
-        }
-      })
+        } 
+      }
+      elHeader.addEventListener("keydown" , keyEsc)
     })
   })
   // NUMBER CONTROLS
