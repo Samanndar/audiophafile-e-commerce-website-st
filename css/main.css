@@ -1530,14 +1530,7 @@ select:-webkit-autofill:focus {
 .header {
   position: relative;
   z-index: 1;
-  padding-top: 32px;
-  padding-bottom: 32px;
   background-color: var(--color-dark);
-}
-@media only screen and (min-width: 992px) {
-  .header {
-    padding-bottom: 36px;
-  }
 }
 .header--absolute {
   position: absolute;
@@ -1553,7 +1546,7 @@ select:-webkit-autofill:focus {
   top: 100%;
   left: 0;
   right: 0;
-  background-color: rgb(249, 7, 7);
+  background-color: rgba(255, 255, 255, 0.104);
 }
 @media only screen and (min-width: 768px) {
   .header::after {
@@ -1561,10 +1554,27 @@ select:-webkit-autofill:focus {
     right: var(--container-padding);
   }
 }
+.header--menu-open::before, .header--cart-open::before {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+}
+@media only screen and (min-width: 992px) {
+  .header--menu-open::before {
+    display: none;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 32px;
   gap: 16px;
 }
 @media only screen and (min-width: 768px) {
@@ -1577,6 +1587,7 @@ select:-webkit-autofill:focus {
   .header__container {
     justify-content: space-between;
     gap: 42px;
+    padding-bottom: 36px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1682,9 +1693,6 @@ select:-webkit-autofill:focus {
   .header--cart-open .header__cart-inner {
     top: calc(100% + 32px);
   }
-}
-.header--menu-open, .header--cart-open {
-  z-index: 99;
 }
 
 .haeder__menu {
