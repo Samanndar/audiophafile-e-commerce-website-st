@@ -1,0 +1,19 @@
+@use "sass:color";
+.hero {
+
+  &__product-info {
+    max-width: 20.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @include breakpoint-up($breakpoint-medium) {
+      max-width: 25.75rem;
+    }
+    @include breakpoint-up($breakpoint-large) {
+      margin-left: 0;
+    }
+  }
+}
+
+
+
