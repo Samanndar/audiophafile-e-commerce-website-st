@@ -1314,10 +1314,6 @@ select:-webkit-autofill:focus {
   overflow: hidden;
 }
 
-.mission {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
 .mission__container {
   display: grid;
   justify-items: center;
@@ -1350,10 +1346,6 @@ select:-webkit-autofill:focus {
 
 /* 768 */
 @media only screen and (min-width: 48em) {
-  .mission {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
   .mission__heading {
     font-size: 2.5rem;
     line-height: 1.1;
@@ -1362,10 +1354,6 @@ select:-webkit-autofill:focus {
 }
 /* 992 */
 @media only screen and (min-width: 62em) {
-  .mission {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
   .mission__container {
     grid-template-columns: 27.8125rem 1fr;
     gap: 125px;
@@ -1839,6 +1827,51 @@ select:-webkit-autofill:focus {
 @media only screen and (min-width: 62em) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 62em) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 62em) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 62em) and (min-device-pixel-ratio: 2), only screen and (min-width: 62em) and (min-resolution: 192dpi), only screen and (min-width: 62em) and (min-resolution: 2dppx) {
   .header-hero {
     background-image: url("../img/header-hero-bg-desktop@2x.png");
+  }
+}
+
+.index-page__main-content {
+  padding-top: 40px;
+  padding-bottom: 120px;
+}
+@media only screen and (min-width: 48em) {
+  .index-page__main-content {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .index-page__main-content {
+    padding-top: 120px;
+    padding-bottom: 200px;
+  }
+}
+
+.index-page__category-cards {
+  margin-bottom: 120px;
+}
+@media only screen and (min-width: 48em) {
+  .index-page__category-cards {
+    margin-bottom: 96px;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .index-page__category-cards {
+    margin-bottom: 168px;
+  }
+}
+
+.index-page__featured-products {
+  margin-bottom: 120px;
+}
+@media only screen and (min-width: 48em) {
+  .index-page__featured-products {
+    margin-bottom: 96px;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .index-page__featured-products {
+    margin-bottom: 168px;
   }
 }
 

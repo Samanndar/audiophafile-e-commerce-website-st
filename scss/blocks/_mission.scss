@@ -1,9 +1,6 @@
 @use "sass:color";
 
 .mission {
-  padding-top: 120px;
-  padding-bottom: 120px;
-
   &__container {
     display: grid;
     justify-items: center;
@@ -44,8 +41,6 @@
 /* 768 */
 @include breakpoint-up(48em) {
   .mission {
-    padding-top: 96px;
-    padding-bottom: 96px;
 
     &__heading {
       font-size: 2.5rem;
@@ -58,8 +53,6 @@
 /* 992 */
 @include breakpoint-up(62em) {
   .mission {
-    padding-top: 200px;
-    padding-bottom: 200px;
 
     &__container {
       grid-template-columns: 27.8125rem 1fr;
