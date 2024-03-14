@@ -1,7 +1,4 @@
 .category-products {
-  padding-top: 64px;
-  padding-bottom: 120px;
-
   &__list {
     display: grid;
     gap: 120px;
@@ -9,14 +6,7 @@
     list-style: none;
   }
 
-  @include breakpoint-up($breakpoint-medium) {
-    padding-top: 120px;
-  }
-
   @include breakpoint-up($breakpoint-large) {
-    padding-top: 160px;
-    padding-bottom: 160px;
-
     &__list {
       gap: 160px;
     }
