@@ -1,12 +1,6 @@
 .similar-products {
-  padding-top: 60px;
-  padding-bottom: 60px;
   text-align: center;
 
-  @include breakpoint-up($breakpoint-large) {
-    padding-bottom: 80px;
-    padding-top: 80px;
-  }
   &__heading {
     @include page-section-heading();
     margin-bottom: 40px;
