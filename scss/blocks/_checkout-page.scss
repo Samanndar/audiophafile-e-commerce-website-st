@@ -54,13 +54,6 @@
     }
   }
 
-  &__summary-wrapper {
-
-  }
-}
-
-.checkout-form {
-
 }
 
 .form {
@@ -69,11 +62,6 @@
 
   @include breakpoint-up($breakpoint-medium) {
     gap: 54px;
-  }
-
-
-  &__section {
-
   }
 
   &__section-heading {
@@ -158,14 +146,14 @@
     &:not(:focus):not(:placeholder-shown):invalid ~ .form__label {
       color: var(--color-error);
     }
+
+    &:focus {
+      border-color: var(--color-primary);
+    }
   }
 
   &__error-message {
     display: none;
-  }
-
-  &__group--full {
-
   }
 
 }

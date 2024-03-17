@@ -2032,6 +2032,7 @@ select:-webkit-autofill:focus {
     margin-bottom: 41px;
   }
 }
+
 .form {
   display: grid;
   gap: 32px;
@@ -2117,6 +2118,9 @@ select:-webkit-autofill:focus {
 }
 .form__field:not(:focus):not(:placeholder-shown):invalid ~ .form__label {
   color: var(--color-error);
+}
+.form__field:focus {
+  border-color: var;
 }
 .form__error-message {
   display: none;
