@@ -1,0 +1,102 @@
+.form {
+  display: grid;
+  gap: 32px;
+
+  @include breakpoint-up($breakpoint-medium) {
+    gap: 54px;
+  }
+
+  &__section-heading {
+    margin-bottom: 16px;
+    font-size: 0.8125rem;
+    line-height: 192.308%;
+    letter-spacing: 0.05806rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+
+  &__section-inner {
+    display: grid;
+    gap: 24px 16px;
+    align-items: start;
+
+    @include breakpoint-up($breakpoint-medium) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__group {
+    display: grid;
+    gap: 8px;
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+
+    @include breakpoint-up($breakpoint-medium) {
+      gap: 8px 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .form__field {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__label {
+    order: -2;
+    justify-self: start;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.0134rem;
+    color: var(--color-dark);
+  }
+
+  &__field {
+    padding: 18px 24px;
+    border-radius: 8px;
+    border: 1px solid #cfcfcf;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.01563rem;
+    color: rgb(0, 0, 0, 0.4);
+
+    &:not(:placeholder-shown) {
+      color: var(--color-dark);
+    }
+
+    &:not(:focus):not(:placeholder-shown):invalid {
+      border-color: var(--color-error);
+      box-shadow: inset 0 0 0 1px var(--color-error);
+    }
+
+    &:not(:focus):not(:placeholder-shown):invalid~.form__error-message {
+      display: block;
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 500;
+      line-height: normal;
+      color: var(--color-error);
+      letter-spacing: -0.0134rem;
+
+      @include breakpoint-up($breakpoint-medium) {
+        order: -1;
+        text-align: right;
+      }
+    }
+
+    &:not(:focus):not(:placeholder-shown):invalid~.form__label {
+      color: var(--color-error);
+    }
+
+    &:focus {
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__error-message {
+    display: none;
+  }
+
+}

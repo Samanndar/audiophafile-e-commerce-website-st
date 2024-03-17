@@ -1351,6 +1351,99 @@ select:-webkit-autofill:focus {
     text-align: left;
   }
 }
+.form {
+  display: grid;
+  gap: 32px;
+}
+@media only screen and (min-width: 48em) {
+  .form {
+    gap: 54px;
+  }
+}
+.form__section-heading {
+  margin-bottom: 16px;
+  font-size: 0.8125rem;
+  line-height: 192.308%;
+  letter-spacing: 0.05806rem;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.form__section-inner {
+  display: grid;
+  gap: 24px 16px;
+  align-items: start;
+}
+@media only screen and (min-width: 48em) {
+  .form__section-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.form__group {
+  display: grid;
+  gap: 8px;
+}
+.form__group--full {
+  grid-column: 1/-1;
+}
+@media only screen and (min-width: 48em) {
+  .form__group {
+    gap: 8px 16px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.form__group .form__field {
+  grid-column: 1/-1;
+}
+.form__label {
+  order: -2;
+  justify-self: start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.0134rem;
+  color: var(--color-dark);
+}
+.form__field {
+  padding: 18px 24px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.01563rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+.form__field:not(:placeholder-shown) {
+  color: var(--color-dark);
+}
+.form__field:not(:focus):not(:placeholder-shown):invalid {
+  border-color: var(--color-error);
+  box-shadow: inset 0 0 0 1px var(--color-error);
+}
+.form__field:not(:focus):not(:placeholder-shown):invalid ~ .form__error-message {
+  display: block;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color-error);
+  letter-spacing: -0.0134rem;
+}
+@media only screen and (min-width: 48em) {
+  .form__field:not(:focus):not(:placeholder-shown):invalid ~ .form__error-message {
+    order: -1;
+    text-align: right;
+  }
+}
+.form__field:not(:focus):not(:placeholder-shown):invalid ~ .form__label {
+  color: var(--color-error);
+}
+.form__field:focus {
+  border-color: var(--color-primary);
+}
+.form__error-message {
+  display: none;
+}
+
 .cart-card {
   padding: 32px;
   background-color: var(--color-white);
@@ -2031,99 +2124,6 @@ select:-webkit-autofill:focus {
   .checkout-page__heading {
     margin-bottom: 41px;
   }
-}
-
-.form {
-  display: grid;
-  gap: 32px;
-}
-@media only screen and (min-width: 48em) {
-  .form {
-    gap: 54px;
-  }
-}
-.form__section-heading {
-  margin-bottom: 16px;
-  font-size: 0.8125rem;
-  line-height: 192.308%;
-  letter-spacing: 0.05806rem;
-  text-transform: uppercase;
-  color: var(--color-primary);
-}
-.form__section-inner {
-  display: grid;
-  gap: 24px 16px;
-  align-items: start;
-}
-@media only screen and (min-width: 48em) {
-  .form__section-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.form__group {
-  display: grid;
-  gap: 8px;
-}
-.form__group--full {
-  grid-column: 1/-1;
-}
-@media only screen and (min-width: 48em) {
-  .form__group {
-    gap: 8px 16px;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.form__group .form__field {
-  grid-column: 1/-1;
-}
-.form__label {
-  order: -2;
-  justify-self: start;
-  font-size: 0.75rem;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.0134rem;
-  color: var(--color-dark);
-}
-.form__field {
-  padding: 18px 24px;
-  border-radius: 8px;
-  border: 1px solid #cfcfcf;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.01563rem;
-  color: rgba(0, 0, 0, 0.4);
-}
-.form__field:not(:placeholder-shown) {
-  color: var(--color-dark);
-}
-.form__field:not(:focus):not(:placeholder-shown):invalid {
-  border-color: var(--color-error);
-  box-shadow: inset 0 0 0 1px var(--color-error);
-}
-.form__field:not(:focus):not(:placeholder-shown):invalid ~ .form__error-message {
-  display: block;
-  text-align: left;
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: normal;
-  color: var(--color-error);
-  letter-spacing: -0.0134rem;
-}
-@media only screen and (min-width: 48em) {
-  .form__field:not(:focus):not(:placeholder-shown):invalid ~ .form__error-message {
-    order: -1;
-    text-align: right;
-  }
-}
-.form__field:not(:focus):not(:placeholder-shown):invalid ~ .form__label {
-  color: var(--color-error);
-}
-.form__field:focus {
-  border-color: var;
-}
-.form__error-message {
-  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
