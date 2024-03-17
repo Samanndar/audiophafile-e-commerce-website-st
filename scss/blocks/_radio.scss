@@ -1,9 +1,22 @@
-.radio {}
+.radio {
 
-.radio__input {}
+  &__input {
+  
+  }
 
-.radio__control {}
+  &__control {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-boder);
+    border-radius: 8px;
+  }
 
-.radio__circle {}
+  &__circle {
 
-.radio__text {}
+  }
+
+  &__text {
+
+  }
+
+}
