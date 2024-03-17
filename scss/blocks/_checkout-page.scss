@@ -1,0 +1,101 @@
+.checkout-page {
+
+  &__main-content {
+    padding-top: 16px;
+    padding-bottom: 96px;
+
+    @include breakpoint-up($breakpoint-medium) {
+      padding-top: 48px;
+      padding-top: 116px;
+    }
+    @include breakpoint-up($breakpoint-medium) {
+      padding-top: 80px;
+      padding-top: 140px;
+    }
+  }
+  &__back-link {
+    padding-bottom: 24px;
+
+    @include breakpoint-up($breakpoint-large) {
+      margin-bottom: 40px;
+    }
+  }
+  &__inner {
+    display: grid;
+    gap: 32px;
+
+    @include breakpoint-up($breakpoint-large) {
+      grid-template-columns: 3fr 1fr;
+    }
+  }
+
+  &__form-wrapper {
+    @include round-card($width: 100%, $height: auto, $bgcolor: $color-white);
+    padding: 24px;
+    @include breakpoint-up($breakpoint-medium) {
+      padding: 30px 28px;
+    }
+    @include breakpoint-up($breakpoint-large) {
+      padding: 54px 48px;
+    }
+  }
+
+  &__heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    margin-bottom: 32px;
+    
+    @include breakpoint-up($breakpoint-medium) {
+      margin-bottom: 41px;
+    }
+  }
+
+  &__summary-wrapper {
+
+  }
+}
+
+.checkout-form {
+
+}
+
+.form {
+
+  &__section {
+
+  }
+
+  &__section-heading {
+
+  }
+
+  &__section-inner {
+
+  }
+
+  &__group {
+
+  }
+
+  &__label {
+
+  }
+
+  &__field {
+
+  }
+
+  &__error-message {
+
+  }
+
+  &__group--full {
+
+  }
+
+}
+

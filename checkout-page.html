@@ -160,8 +160,62 @@
   </header>
 
   <!-- MAIN-CONTENT -->
-  <main class="main-content">
-    
+  <main class="checkout-page__main-content main-content">
+    <div class="checkout-page__back-link container">
+      <a href="./index.html" class="back-link">Go back</a>
+    </div>
+    <div class="checkout-page__inner container">
+      <div class="checkout-page__form-wrapper">
+        <h1 class="checkout-page__heading">Checkout</h1>
+        <!-- CHECKOUT-FORM -->
+        <form action="https://echo.htmlacademy.ru" class="checkout-form form" method="POST">
+          <h2 class="visually-hidden">Checkout form</h2>
+          <section class="form__section">
+            <h3 class="form__section-heading">Billing details</h3>
+            <div class="form__section-inner">
+              <div class="form__group">
+                <label class="form__label" for="name-input">Name</label>
+                <input type="text" class="form__field" name="name" id="name-input" required placeholder="Alexei Ward">
+                <div class="form__error-message">Wrong format</div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="email-input">Email Address</label>
+                <input type="email" class="form__field" name="email" id="email-input" required placeholder="alexei@mail.com">
+                <div class="form__error-message">Wrong format</div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="phone-input">Phone Number</label>
+                <input type="tel" class="form__field" name="phone" id="phone-input" required placeholder="+1 202-555-0136">
+                <div class="form__error-message">Wrong format</div>
+              </div>
+            </div>
+          </section>
+          <section class="form__section">
+            <h3 class="form__section-heading">Shipping info</h3>
+            <div class="form__section-inner">
+              <div class="form__group form__group--full">
+                <label class="form__label" for="address-input">Address</label>
+                <input type="text" class="form__field" name="address" id="address-input" required placeholder="1137 Williams Avenue">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="zip-input">ZIP Code</label>
+                <input type="text" class="form__field" name="zip" id="zip-input" required placeholder="10001">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="city-input">City</label>
+                <input type="text" class="form__field" name="city" id="city-input" required placeholder="New York">
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="country-input">Country</label>
+                <input type="text" class="form__field" name="country" id="country-input" required placeholder="United States">
+              </div>
+            </div>
+          </section>
+        </form>  
+      </div>
+
+      <div class="checkout-page__summary-wrapper"></div>
+    </div>
   </main>
 
   <footer class="footer">
