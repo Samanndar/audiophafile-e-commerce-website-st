@@ -1,0 +1,20 @@
+.form-payment-method {
+  display: grid;
+  gap: 16px;
+
+  @include breakpoint-up($breakpoint-medium) {
+    gap: 12px;
+  }
+  @include breakpoint-up($breakpoint-large) {
+    gap: 32px;
+  }
+  
+  &__radio {
+    grid-column: 2 / -1;
+  }
+
+  &__tabs {
+    grid-row: 3 / 4;
+    grid-column : 1 / -1;
+  }
+}

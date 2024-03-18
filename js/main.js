@@ -68,7 +68,30 @@ function init() {
     parentNumberControls.querySelector(".number-controls__count-value").textContent = currentItemCount;
   }
 
+  // CHEKOUT FORM
+  const elCheckoutForm = document.querySelector("#checkout-form");
+  const elFormPaymentMethodTabs = elCheckoutForm.querySelector(".form-payment-method__tabs");
+  const elsFormPaymentMethodTab = elFormPaymentMethodTabs.querySelectorAll(".form-payment-method__tab");
+  console.log(elsFormPaymentMethodTab);
 
+  function hidePaymentMethodsTabs() {
+    elsFormPaymentMethodTab.forEach(elsFormPaymentMethodTab => {
+      elsFormPaymentMethodTab.setAttribute("hidden", "true")
+    });
+  }
+
+  if(elCheckoutForm) {
+    const  elsPaymentMethodRadioInputs = elCheckoutForm.querySelectorAll(".form-payment__radio-input");
+
+    elsPaymentMethodRadioInputs.forEach(elsPaymentMethodRadioInputs => {
+      elsPaymentMethodRadioInputs.addEventListener("change", function() {
+        hidePaymentMethodsTabs()
+        const target = elsPaymentMethodRadioInputs.dataset.target;
+        elFormPaymentMethodTabs.querySelector(`[data-tab="${target}"]`).removeAttribute("hidden");
+        console.log(elFormPaymentMethodTabs);
+      })
+    })
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);

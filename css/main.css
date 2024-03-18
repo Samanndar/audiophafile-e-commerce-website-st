@@ -1397,6 +1397,28 @@ select:-webkit-autofill:focus {
   color: var(--color-dark);
 }
 
+.form-payment-method {
+  display: grid;
+  gap: 16px;
+}
+@media only screen and (min-width: 48em) {
+  .form-payment-method {
+    gap: 12px;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .form-payment-method {
+    gap: 32px;
+  }
+}
+.form-payment-method__radio {
+  grid-column: 2/-1;
+}
+.form-payment-method__tabs {
+  grid-row: 3/4;
+  grid-column: 1/-1;
+}
+
 .form {
   display: grid;
   gap: 32px;
