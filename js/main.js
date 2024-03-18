@@ -96,7 +96,7 @@ function init() {
     })
   }
   function enableEMoneyField() {
-    elFormPamentMethodField.setAttribute("disabled", "true");
+    elFormPamentMethodField.removeAttribute("disabled");
   }
   function disabledEMoneyFields() {
     elFormPamentMethodField.forEach(elFormPamentMethodField => {
