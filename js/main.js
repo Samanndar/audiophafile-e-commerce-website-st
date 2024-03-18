@@ -72,7 +72,7 @@ function init() {
   const elCheckoutForm = document.querySelector("#checkout-form");
   const elFormPaymentMethodTabs = elCheckoutForm.querySelector(".form-payment-method__tabs");
   const elsFormPaymentMethodTab = elFormPaymentMethodTabs.querySelectorAll(".form-payment-method__tab");
-  console.log(elsFormPaymentMethodTab);
+  const elFormPamentMethodField = elFormPaymentMethodTabs.querySelectorAll(".form-payment-method__e-money-field");
 
   function hidePaymentMethodsTabs() {
     elsFormPaymentMethodTab.forEach(elsFormPaymentMethodTab => {
@@ -86,10 +86,21 @@ function init() {
     elsPaymentMethodRadioInputs.forEach(elsPaymentMethodRadioInputs => {
       elsPaymentMethodRadioInputs.addEventListener("change", function() {
         hidePaymentMethodsTabs()
+        disabledEMoneyFields()
         const target = elsPaymentMethodRadioInputs.dataset.target;
         elFormPaymentMethodTabs.querySelector(`[data-tab="${target}"]`).removeAttribute("hidden");
-        console.log(elFormPaymentMethodTabs);
+        if(target == "e-money") {
+          enableEMoneyField();
+        }
       })
+    })
+  }
+  function enableEMoneyField() {
+    elFormPamentMethodField.setAttribute("disabled", "true");
+  }
+  function disabledEMoneyFields() {
+    elFormPamentMethodField.forEach(elFormPamentMethodField => {
+      elFormPamentMethodField.setAttribute("disabled", "false");
     })
   }
 }

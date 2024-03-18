@@ -3,6 +3,9 @@
   &__input:checked ~ .radio__control {
     border-color: var(--color-primary);
   }
+  &__input:checked:focus ~ .radio__control {
+    @include outline(var(--color-primary))
+  }
 
   &__control {
     display: flex;

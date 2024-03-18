@@ -153,7 +153,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border-color: transparent;
+  border-color: var(--color-boder);
   -webkit-text-fill-color: inherit;
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
@@ -205,6 +205,7 @@ select:-webkit-autofill:focus {
   padding: 14px 29px;
   color: var(--color-white);
   background-color: var(--color-dark);
+  border: 1px solid var(--color-primary);
   font-size: 0.8125rem;
   font-style: normal;
   font-weight: 700;
@@ -1355,6 +1356,10 @@ select:-webkit-autofill:focus {
 .radio__input:checked ~ .radio__control {
   border-color: var(--color-primary);
 }
+.radio__input:checked:focus ~ .radio__control {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 3px;
+}
 .radio__control {
   display: flex;
   align-items: center;
@@ -1417,6 +1422,21 @@ select:-webkit-autofill:focus {
 .form-payment-method__tabs {
   grid-row: 3/4;
   grid-column: 1/-1;
+}
+@media only screen and (min-width: 48em) {
+  .form-payment-method__cash-info {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+}
+.form-payment-method__cash-icon {
+  display: none;
+}
+@media only screen and (min-width: 48em) {
+  .form-payment-method__cash-icon {
+    display: block;
+  }
 }
 
 .form {

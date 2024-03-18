@@ -234,17 +234,22 @@
                   <div class="form-payment-method__tab" data-tab="e-money">
                     <div class="form__section-inner">
                       <div class="form__group">
-                        <input type="text" class="form__field" name="e-money-number" id="e-money-number-input" required placeholder="238523993">
+                        <input type="text" class="form__field form-payment-method__e-money-field" name="e-money-number" id="e-money-number-input" required placeholder="238523993">
                         <label class="form__label" for="e-money-number-input">e-Money Number</label>
                       </div>
                       <div class="form__group">
-                        <input type="text" class="form__field" name="e-money-zip" id="e-money-zip-input" required placeholder="6891">
+                        <input type="text" class="form__field form-payment-method__e-money-field" name="e-money-zip" id="e-money-zip-input" required placeholder="6891">
                         <label class="form__label" for="e-money-zip-input">e-Money Pin</label>
                       </div>
                     </div>
                   </div>
                   <div class="form-payment-method__tab" hidden data-tab="cash">
-                    The `Cash on Delivery` option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is so that your order will not be cancelled.
+                    <div class="form-payment-method__cash-info">
+                      <img src="./img/icon-cash-payment.svg" alt="cash-icon" class="form-payment-method__cash-icon" width="48" height="48" aria-hidden="true">
+                      <p>
+                        The `Cash on Delivery` option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is so that your order will not be cancelled.
+                      </p>
+                    </div>
                   </div>
               </div>
               </div>
@@ -305,7 +310,7 @@
                         <dd class="cart-card-summary__value">$ 5,446</dd>
                       </div>
                     </dl>
-                    <a class="button button--primary button--block" type="submit">Continue & Pay</a>
+                    <button class="button button--primary button--block" type="submit" form="checkout-form">Continue & Pay</button>
                   </div>
                 </section>
               </div>

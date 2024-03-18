@@ -17,4 +17,21 @@
     grid-row: 3 / 4;
     grid-column : 1 / -1;
   }
+
+  &__cash-info {
+    
+    @include breakpoint-up($breakpoint-medium) {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+  }  
+  
+  &__cash-icon {
+    display: none;
+
+    @include breakpoint-up($breakpoint-medium) {
+      display: block;
+    }
+  }
 }
