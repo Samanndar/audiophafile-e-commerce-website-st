@@ -1353,6 +1353,19 @@ select:-webkit-autofill:focus {
     text-align: left;
   }
 }
+.modal {
+  display: none;
+}
+.modal--open {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .radio__input:checked ~ .radio__control {
   border-color: var(--color-primary);
 }
