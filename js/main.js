@@ -70,9 +70,9 @@ function init() {
 
   // CHEKOUT FORM
   const elCheckoutForm = document.querySelector("#checkout-form");
-  const elFormPaymentMethodTabs = elCheckoutForm.querySelector(".form-payment-method__tabs");
-  const elsFormPaymentMethodTab = elFormPaymentMethodTabs.querySelectorAll(".form-payment-method__tab");
-  const elFormPamentMethodField = elFormPaymentMethodTabs.querySelectorAll(".form-payment-method__e-money-field");
+  const elFormPaymentMethodTabs = document.querySelector(".form-payment-method__tabs");
+  const elsFormPaymentMethodTab = document.querySelectorAll(".form-payment-method__tab");
+  const elFormPamentMethodField = document.querySelectorAll(".form-payment-method__e-money-field");
 
   function hidePaymentMethodsTabs() {
     elsFormPaymentMethodTab.forEach(elsFormPaymentMethodTab => {
