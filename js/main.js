@@ -103,6 +103,31 @@ function init() {
       elFormPamentMethodField.setAttribute("disabled", "false");
     })
   }
+
+  // MODAL 
+  if(elCheckoutForm) {
+    elCheckoutForm.addEventListener("submit", function(evt) {
+      evt.preventDefault();
+      
+      const elModal = document.querySelector(".modal")
+      elModal.classList.add("modal--open");
+    })
+  }
+
+  // PRODUCT-LIST
+  const elProductList = document.querySelector(".products-list");
+    if(elProductList) {
+      const elProductsListtoggler = elProductList.querySelector(".products-list__toggler");
+      
+      if(elProductsListtoggler) {
+        elProductsListtoggler.addEventListener("click", function() {
+          elProductList.classList.toggle("products-list--collapsed");
+
+          elProductsListtoggler.textContent = elProductList.classList.contains("products-list--collapsed") ? "and 2 other item(s)" : "View less";
+        });
+      }
+    }
+
 }
 
 document.addEventListener('DOMContentLoaded', init);
