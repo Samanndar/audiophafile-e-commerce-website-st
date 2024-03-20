@@ -387,16 +387,36 @@
   <section class="modal modal--open">
     <div class="modal__dialog">
       <div class="modal__content">
-        <img src="./img/icon-check-round.svg" alt="modal__icon" width="64" height="64" aria-hidden="true">
+        <img src="./img/icon-check-round.svg" alt="modal__icon" class="modal__icon" width="64" height="64" aria-hidden="true">
         <h2 class="modal__heading">
-          Thank you for order
+          Thank you <br /> for your order
         </h2>
         <p class="modal__text">You will receive an email confirmation shorly.</p>
-        <div class="purchased-products">
+      <div class="modal__purchased-products purchased-products">
           <div class="purchased-products__details">
-            <div class="products-list">
+            <div class="products-list products-list--collapsed"> <!-- products-list--single -->
               <ul class="products-list__list">
-                <li class="product-cart-card" role="listitem">
+                <li class="products-list__item product-cart-card product-cart-card--small" role="listitem">
+                  <div class="product-cart-card__img-wrapper">
+                    <img src="" alt="" class="product-cart-card__img" srcset=" 1x,  2x" width="48" height="48">
+                  </div>
+                  <div class="product-cart-card__info">
+                    <h3 class="product-cart-card__title">XX99 MK II</h3>
+                    <p class="product-cart-card__price">$ 2,999</p>
+                    <div class="product-cart-card__count product-cart-card__count--summary">x1</div>
+                  </div>
+                </li>
+                <li class="products-list__item product-cart-card product-cart-card--small" role="listitem">
+                  <div class="product-cart-card__img-wrapper">
+                    <img src="" alt="" class="product-cart-card__img" srcset=" 1x,  2x" width="48" height="48">
+                  </div>
+                  <div class="product-cart-card__info">
+                    <h3 class="product-cart-card__title">XX99 MK II</h3>
+                    <p class="product-cart-card__price">$ 2,999</p>
+                    <div class="product-cart-card__count product-cart-card__count--summary">x1</div>
+                  </div>
+                </li>
+                <li class="products-list__item product-cart-card product-cart-card--small" role="listitem">
                   <div class="product-cart-card__img-wrapper">
                     <img src="" alt="" class="product-cart-card__img" srcset=" 1x,  2x" width="48" height="48">
                   </div>
