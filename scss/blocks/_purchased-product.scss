@@ -10,6 +10,8 @@
 
   &__details {
     flex-grow: 1;
+    display: grid;
+    align-items: center;
     padding: 24px;
     background-color: var(--color-grey);
   }
